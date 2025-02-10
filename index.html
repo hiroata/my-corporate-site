@@ -3,38 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="UTAGE活用のセールスファネル構築代行とWeb集客コンサルティングを提供">
+    <meta name="description" content="株式会社CLANは、UTAGEを活用したセールスファネル構築代行とWeb集客コンサルティングで、あなたのビジネスの成長を加速させます。">
     <meta name="keywords" content="UTAGE, セールスファネル, Web集客, デジタルマーケティング, 鹿児島">
     <title>株式会社CLAN | セールスファネル構築のプロフェッショナル</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">
-                <h1>CLAN</h1>
+            <div class="navbar__container">
+                <div class="logo">
+                    <h1><a href="#">株式会社CLAN</a></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#works">制作実績</a></li>
+                    <li><a href="#testimonials">お客様の声</a></li>
+                    <li><a href="#consulting">顧問サービス</a></li>
+                    <li><a href="#about">会社概要</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+                <button class="mobile-menu" aria-label="メニュー">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#works">制作実績</a></li>
-                <li><a href="#testimonials">お客様の声</a></li>
-                <li><a href="#consulting">顧問サービス</a></li>
-                <li><a href="#about">会社概要</a></li>
-                <li><a href="#contact">お問い合わせ</a></li>
-            </ul>
-            <button class="mobile-menu" aria-label="メニュー" aria-expanded="false" aria-controls="nav-links">
-                <i class="fas fa-bars"></i>
-            </button>
         </nav>
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h2>セールスファネルで企業の成長を加速する</h2>
-            <p>UTAGE活用のプロフェッショナルとして、最適なセールスファネルを構築</p>
+        <div class="hero__content">
+            <h2>セールスファネルで<br>企業の成長を加速する</h2>
+            <p>UTAGE活用のプロフェッショナルとして、<br>最適なセールスファネルを構築</p>
             <a href="#contact" class="cta-button">お問い合わせ</a>
         </div>
     </section>
@@ -45,8 +47,8 @@
                 <h2>会社概要</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <dl class="company-info">
-                            <dt>会社名</dt>
+                        <dl class="company-profile">
+                            <dt>社名</dt>
                             <dd>株式会社CLAN</dd>
                             <dt>所在地</dt>
                             <dd>〒892-0851 鹿児島県鹿児島市上竜尾町1番2号</dd>
@@ -57,66 +59,69 @@
                             <dt>資本金</dt>
                             <dd>3,000,000円</dd>
                             <dt>連絡先</dt>
-                            <dd>info@clanbiz.net</dd>
+                            <dd><a href="mailto:info@clanbiz.net">info@clanbiz.net</a></dd>
                             <dt>受付時間</dt>
                             <dd>9:00〜18:00（土日祝を除く）</dd>
-                        </dl>
+                            </dl>
                     </div>
                     <div class="about-image">
-                        <img src="images/office.jpg" alt="株式会社CLANのオフィス" width="400" height="300">
+                        <img src="images/company.png" alt="株式会社CLANのオフィス" width="400" height="300">
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="profile" class="profile">
-            <div class="container">
-                <div class="profile-grid">
-                    <div class="profile-content">
-                        <h2>代表メッセージ</h2>
-                        <div class="message-content">
-                            <p>私たちCLANは、「セールスファネルで企業の成長を加速する」をミッションに掲げ、
-                            中小企業のデジタルマーケティングを支援しています。</p>
-                            <p>特にUTAGEを活用したセールスファネル構築では、
-                            お客様のビジネスに最適な導線を設計し、成果につながるまでサポートいたします。</p>
-                            <p>私たちと共に、あなたのビジネスの新たなステージを築いていきましょう。</p>
-                        </div>
-                        <div class="profile-info">
-                            <h3>プロフィール</h3>
-                            <p>株式会社CLAN 代表取締役<br>前田 由紀子</p>
-                            <p>鹿児島県出身。大手企業でのマーケティング経験を活かし、
-                            中小企業のデジタルマーケティング支援を行う。
-                            特にセールスファネル構築とUTAGE活用の専門家として、
-                            多くの企業の売上向上に貢献している。</p>
-                        </div>
-                    </div>
-                    <div class="profile-image">
-                        <img src="images/ceo.jpg" alt="前田由紀子" width="300" height="400">
-                    </div>
+          <div class="container">
+            <h2>代表メッセージ</h2>
+            <div class="profile-content">
+
+                <div class="profile-image">
+                        <img src="images/profile.jpg" alt="前田由紀子" width="300" height="400">
+                </div>
+                <div class="profile-text">
+                    <h3>前田 由紀子</h3>
+                    <p class="profile-title">株式会社CLAN 代表取締役</p>
+                    <p>
+                        私たちCLANは、「セールスファネルで企業の成長を加速する」をミッションに掲げ、中小企業のデジタルマーケティングを支援しています。<br><br>
+                        特にUTAGEを活用したセールスファネル構築では、お客様のビジネスに最適な導線を設計し、成果につながるまでサポートいたします。<br><br>
+                        私達と共に、あなたのビジネスの新たなステージを築いていきましょう。
+                    </p>
                 </div>
             </div>
+
+            <div class="profile-section">
+               <h2>プロフィール</h2>
+                <p>
+                    鹿児島県出身。大手企業でのマーケティング経験を活かし、中小企業のデジタルマーケティング支援を行う。特にセールスファネル構築とUTAGE活用の専門家として、多くの企業の売上向上に貢献している。
+                </p>
+            </div>
+          </div>
         </section>
 
-        <section id="mission" class="mission">
+        <section id="consulting" class="consulting">
             <div class="container">
-                <h2>ミッション</h2>
-                <div class="values-grid">
-                    <div class="value-card">
-                        <i class="fas fa-lightbulb"></i>
-                        <h3>イノベーション</h3>
-                        <p>常に最新のテクノロジーを追求し、革新的なソリューションを提供します</p>
+                <h2>顧問サービス</h2>
+                 <div class="consulting-content">
+                    <div class="consulting-text">
+                        <h3>UTAGE構築代行 "丸投げちゃん"</h3>
+                        <p>
+                            UTAGEを活用したセールスファネルの構築を、企画から運用まで丸投げでサポートします。
+                            「Web集客を強化したいが、何から手をつけていいか分からない」
+                            「UTAGEを導入したが、使いこなせていない」
+                            「専門知識を持ったパートナーに、安心して任せたい」
+                            そんなお悩みをお持ちの企業様に最適なサービスです。
+                        </p>
+                        <p>
+                            お客様のビジネスモデルや目標に合わせて、最適なファネル戦略を立案。
+                            UTAGEの機能を最大限に活用し、見込み客の獲得から顧客育成、販売までを自動化する仕組みを構築します。
+                            さらに、効果測定や改善提案も行い、継続的な成果向上をサポートします。
+                        </p>
                     </div>
-                    <div class="value-card">
-                        <i class="fas fa-handshake"></i>
-                        <h3>信頼</h3>
-                        <p>お客様との長期的な信頼関係を大切にします</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-globe"></i>
-                        <h3>持続可能性</h3>
-                        <p>環境に配慮した持続可能なソリューションを提供します</p>
-                    </div>
-                </div>
+                      <div class="consulting-image">
+                        <img src="images/utage.png" alt="UTAGE構築代行" width="400" height="300">
+                     </div>
+                  </div>
             </div>
         </section>
 
@@ -125,44 +130,21 @@
                 <h2>制作実績</h2>
                 <div class="works-grid">
                     <div class="work-card">
-                        <div class="work-image">
-                            <img src="images/work1.jpg" alt="飲食店のセールスファネル" width="400" height="300">
-                        </div>
-                        <div class="work-content">
-                            <h3>飲食店のセールスファネル構築</h3>
-                            <p>予約数を3倍に増加させた実践的なファネル設計と運用をサポート。顧客の行動データを分析し、効果的なアプローチを実現。</p>
-                            <ul class="work-stats">
-                                <li><i class="fas fa-chart-line"></i> 予約数300%増加</li>
-                                <li><i class="fas fa-users"></i> 新規顧客獲得率150%向上</li>
-                            </ul>
-                        </div>
+                        <img src="images/work1.png" alt="制作実績1" width="300" height="200">
+                        <h3>実績タイトル1</h3>
+                        <p>実績の簡単な説明1</p>
                     </div>
                     <div class="work-card">
-                        <div class="work-image">
-                            <img src="images/work2.jpg" alt="美容サロンのLPデザイン" width="400" height="300">
-                        </div>
-                        <div class="work-content">
-                            <h3>美容サロンのLPデザイン</h3>
-                            <p>UTAGEを活用した効果的なランディングページの設計と実装。CVR（コンバージョン率）を大幅に改善。</p>
-                            <ul class="work-stats">
-                                <li><i class="fas fa-percent"></i> CVR 8.5%達成</li>
-                                <li><i class="fas fa-shopping-cart"></i> 月間売上200%増</li>
-                            </ul>
-                        </div>
+                        <img src="images/work2.png" alt="制作実績2" width="300" height="200">
+                        <h3>実績タイトル2</h3>
+                        <p>実績の簡単な説明2</p>
                     </div>
-                    <div class="work-card">
-                        <div class="work-image">
-                            <img src="images/work3.jpg" alt="教育サービスのファネル改善" width="400" height="300">
-                        </div>
-                        <div class="work-content">
-                            <h3>教育サービスのファネル改善</h3>
-                            <p>既存のセールスファネルを分析し、ボトルネックを特定。改善策の実装により、成約率が大幅に向上。</p>
-                            <ul class="work-stats">
-                                <li><i class="fas fa-graduation-cap"></i> 資料請求数250%増加</li>
-                                <li><i class="fas fa-handshake"></i> 成約率180%向上</li>
-                            </ul>
-                        </div>
+                     <div class="work-card">
+                        <img src="images/work3.png" alt="制作実績3" width="300" height="200">
+                        <h3>実績タイトル3</h3>
+                        <p>実績の簡単な説明3</p>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -172,88 +154,12 @@
                 <h2>お客様の声</h2>
                 <div class="testimonials-grid">
                     <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <i class="fas fa-quote-left"></i>
-                            <blockquote>
-                                UTAGEを活用したセールスファネルの構築により、問い合わせ数が大幅に増加。
-                                専門的な知識とサポート体制に大変満足しています。
-                            </blockquote>
-                            <div class="testimonial-author">
-                                <div class="author-info">
-                                    <h3>山田 健一</h3>
-                                    <p>株式会社Growthライン<br>代表取締役</p>
-                                </div>
-                            </div>
-                        </div>
+                        <p>「UTAGE導入後、見込み客が2倍に増えました！」</p>
+                        <p class="testimonial-author">- A社 代表取締役 山田様</p>
                     </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <i class="fas fa-quote-left"></i>
-                            <blockquote>
-                                的確なアドバイスと迅速な対応で、Web集客の課題を解決していただきました。
-                                売上が1.5倍に増加し、大きな成果を実感しています。
-                            </blockquote>
-                            <div class="testimonial-author">
-                                <div class="author-info">
-                                    <h3>鈴木 美咲</h3>
-                                    <p>BeautyStyle株式会社<br>マーケティング部長</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <i class="fas fa-quote-left"></i>
-                            <blockquote>
-                                セールスファネルの改善提案から実装まで、一貫してサポートしていただき、
-                                成約率が大幅に向上しました。継続的なフォローアップにも感謝しています。
-                            </blockquote>
-                            <div class="testimonial-author">
-                                <div class="author-info">
-                                    <h3>高橋 誠</h3>
-                                    <p>EdTech Solutions<br>事業部長</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="consulting" class="consulting">
-            <div class="container">
-                <h2>顧問サービス</h2>
-                <div class="consulting-content">
-                    <!-- 顧問サービスのコンテンツはここに追加予定 -->
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="services">
-            <div class="container">
-                <h2>サービス</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <i class="fas fa-funnel-dollar"></i>
-                        <h3>UTAGE構築代行</h3>
-                        <p>UTAGEを活用した最適なセールスファネルを構築し、お客様のビジネスの成長を加速させます。</p>
-                        <ul class="service-features">
-                            <li>戦略的なファネル設計</li>
-                            <li>UTAGE活用の最適化</li>
-                            <li>コンバージョン率の向上</li>
-                        </ul>
-                        <a href="#contact" class="service-link">お問い合わせ <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Web集客コンサルティング</h3>
-                        <p>デジタルマーケティングの専門知識を活かし、効果的なWeb集客戦略を提案します。</p>
-                        <ul class="service-features">
-                            <li>マーケティング戦略立案</li>
-                            <li>集客施策の最適化</li>
-                            <li>データ分析と改善提案</li>
-                        </ul>
-                        <a href="#contact" class="service-link">お問い合わせ <i class="fas fa-arrow-right"></i></a>
+                      <div class="testimonial-card">
+                        <p>「Web集客の知識が全くない私でも、安心して任せられました。」</p>
+                        <p class="testimonial-author">- B社 マーケティング担当 鈴木様</p>
                     </div>
                 </div>
             </div>
@@ -287,7 +193,8 @@
                 <div class="footer-section">
                     <h3>株式会社CLAN</h3>
                     <p>〒892-0851<br>鹿児島県鹿児島市上竜尾町1番2号</p>
-                    <p>TEL: 準備中<br>受付時間: 9:00〜18:00（土日祝を除く）</p>
+                    <p>TEL: 準備中</p>
+                    <p>受付時間: 9:00〜18:00（土日祝を除く）</p>
                 </div>
                 <div class="footer-section">
                     <h3>リンク</h3>
@@ -309,10 +216,10 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 株式会社CLAN. All rights reserved.</p>
+                <p>© 2025 株式会社CLAN. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 </html>
