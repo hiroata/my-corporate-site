@@ -1,0 +1,175 @@
+/* Contact Form Specific Styles */
+.contact-section {
+    padding: 4rem 0;
+    background-color: var(--color-background);
+}
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+/* Required Field Indicator */
+.required {
+    color: #dc3545;
+    font-size: 0.8em;
+    margin-left: 0.5rem;
+}
+
+/* Form Inputs */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    font-size: 1rem;
+    font-family: var(--font-family-sans);
+    transition: border-color var(--transition-speed);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--color-accent);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Error Messages */
+.error-message {
+    display: block;
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Privacy Policy Checkbox */
+.privacy-policy {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.privacy-policy a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.privacy-policy a:hover {
+    text-decoration: underline;
+}
+
+/* reCAPTCHA Container */
+.g-recaptcha {
+    margin: 1.5rem 0;
+}
+
+/* Form Buttons */
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.submit-button {
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-speed);
+}
+
+.submit-button:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-2px);
+}
+
+.submit-button:disabled {
+    background-color: var(--color-text-light);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Confirmation Page Styles */
+.confirmation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.back-button {
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+    background-color: var(--color-text-light);
+    color: var(--color-primary);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-speed);
+}
+
+.back-button:hover {
+    background-color: var(--color-text);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .submit-button,
+    .back-button {
+        width: 100%;
+    }
+}
