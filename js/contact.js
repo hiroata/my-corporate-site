@@ -39,8 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         email: '※正しいメールアドレスを入力してください',
         maxLength: '※文字数が制限を超えています',
         pattern: '※正しい形式で入力してください',
-        privacy: '※プライバシーポリシーに同意してください',
-        recaptcha: '※reCAPTCHAの確認をお願いします'
+        privacy: '※プライバシーポリシーに同意してください'
     };
 
     // バリデーション関数
@@ -103,16 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // reCAPTCHAの確認
-        const recaptchaResponse = grecaptcha.getResponse();
-        const recaptchaError = document.getElementById('recaptcha-error');
-        if (!recaptchaResponse) {
-            isValid = false;
-            recaptchaError.textContent = errorMessages.recaptcha;
-        } else {
-            recaptchaError.textContent = '';
-        }
-
         return isValid;
     }
 
@@ -122,13 +111,52 @@ document.addEventListener('DOMContentLoaded', function() {
         field.addEventListener('input', () => validateField(field));
     });
 
+    // メール本文の生成
+    function generateEmailBody(formData) {
+        const inquiryTypes = {
+            utage: 'UTAGE構築に関するご相談',
+            consulting: 'Web集客コンサルティング',
+            other: 'その他のお問い合わせ'
+        };
+
+        return `
+会社名：${formData.get('company')}
+お名前：${formData.get('name')}
+メールアドレス：${formData.get('email')}
+電話番号：${formData.get('phone') || '未入力'}
+お問い合わせ種別：${inquiryTypes[formData.get('inquiry_type')] || formData.get('inquiry_type')}
+
+お問い合わせ内容：
+${formData.get('message')}
+        `.trim();
+    }
+
     // フォーム送信時の処理
-    form.addEventListener('submit', function(e) {
+    function handleSubmit(e) {
         e.preventDefault();
 
         if (validateForm()) {
-            // 確認画面へ遷移
-            form.submit();
+            const formData = new FormData(form);
+            const mailTo = 'info@example.com'; // お問い合わせ先メールアドレス
+            const subject = 'お問い合わせ - 株式会社CLAN';
+            const body = generateEmailBody(formData);
+
+            // メーラーを開く
+            window.location.href = `mailto:${mailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            // 送信確認メッセージを表示
+            const confirmationMessage = document.createElement('div');
+            confirmationMessage.className = 'confirmation-message';
+            confirmationMessage.innerHTML = `
+                <h2>お問い合わせ内容の確認</h2>
+                <p>メールソフトが起動します。<br>内容をご確認の上、送信してください。</p>
+                <p>メールソフトが起動しない場合は、以下のメールアドレスまでご連絡ください：<br>
+                <a href="mailto:${mailTo}">${mailTo}</a></p>
+            `;
+
+            // フォームを非表示にして確認メッセージを表示
+            form.style.display = 'none';
+            form.parentNode.insertBefore(confirmationMessage, form);
         } else {
             // エラーがある場合は最初のエラー項目へスクロール
             const firstError = form.querySelector('.error');
@@ -136,7 +164,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         }
-    });
+        return false;
+    }
+
+    // フォームにhandleSubmit関数を設定
+    form.onsubmit = handleSubmit;
 
     // 文字数カウンター
     const messageField = document.getElementById('message');

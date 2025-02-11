@@ -10,99 +10,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="navbar__container">
-                <div class="logo">
-                    <h1><a href="#">株式会社CLAN</a></h1>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#works">制作実績</a></li>
-                    <li><a href="#testimonials">お客様の声</a></li>
-                    <li><a href="#consulting">顧問サービス</a></li>
-                    <li><a href="#about">会社概要</a></li>
-                    <li><a href="#contact">お問い合わせ</a></li>
-                </ul>
-                <button class="mobile-menu" aria-label="メニュー">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </nav>
-    </header>
-
     <section id="home" class="hero">
         <div class="hero__content">
-            <h2>セールスファネルで<br>企業の成長を加速する</h2>
+            <h1>セールスファネルで<br>企業の成長を加速する</h1>
             <p>UTAGE活用のプロフェッショナルとして、<br>最適なセールスファネルを構築</p>
-            <a href="#contact" class="cta-button">お問い合わせ</a>
+            <a href="/contact.html" class="cta-button">お問い合わせ</a>
         </div>
     </section>
 
     <main>
-        <section id="about" class="about">
+        <section id="works" class="works">
             <div class="container">
-                <h2>会社概要</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <dl class="company-profile">
-                            <dt>社名</dt>
-                            <dd>株式会社CLAN</dd>
-                            <dt>所在地</dt>
-                            <dd>〒892-0851 鹿児島県鹿児島市上竜尾町1番2号</dd>
-                            <dt>代表者</dt>
-                            <dd>前田 由紀子</dd>
-                            <dt>事業内容</dt>
-                            <dd>セールスファネル構築代行 (UTAGE活用)</dd>
-                            <dt>資本金</dt>
-                            <dd>3,000,000円</dd>
-                            <dt>連絡先</dt>
-                            <dd><a href="mailto:info@clanbiz.net">info@clanbiz.net</a></dd>
-                            <dt>受付時間</dt>
-                            <dd>9:00〜18:00（土日祝を除く）</dd>
-                            </dl>
+                <h2>制作実績</h2>
+                <div class="works-grid">
+                    <div class="work-card">
+                        <img src="images/work1.png" alt="制作実績1" width="300" height="200" loading="lazy">
+                        <h3>実績タイトル1</h3>
+                        <p>実績の簡単な説明1</p>
                     </div>
-                    <div class="about-image">
-                        <img src="images/company.png" alt="株式会社CLANのオフィス" width="400" height="300">
+                    <div class="work-card">
+                        <img src="images/work2.png" alt="制作実績2" width="300" height="200" loading="lazy">
+                        <h3>実績タイトル2</h3>
+                        <p>実績の簡単な説明2</p>
+                    </div>
+                    <div class="work-card">
+                        <img src="images/work3.png" alt="制作実績3" width="300" height="200" loading="lazy">
+                        <h3>実績タイトル3</h3>
+                        <p>実績の簡単な説明3</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="profile" class="profile">
-          <div class="container">
-            <h2>代表メッセージ</h2>
-            <div class="profile-content">
-
-                <div class="profile-image">
-                        <img src="images/profile.jpg" alt="前田由紀子" width="300" height="400">
-                </div>
-                <div class="profile-text">
-                    <h3>前田 由紀子</h3>
-                    <p class="profile-title">株式会社CLAN 代表取締役</p>
-                    <p>
-                        私たちCLANは、「セールスファネルで企業の成長を加速する」をミッションに掲げ、中小企業のデジタルマーケティングを支援しています。<br><br>
-                        特にUTAGEを活用したセールスファネル構築では、お客様のビジネスに最適な導線を設計し、成果につながるまでサポートいたします。<br><br>
-                        私達と共に、あなたのビジネスの新たなステージを築いていきましょう。
-                    </p>
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>お客様の声</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p>「UTAGE導入後、見込み客が2倍に増えました！」</p>
+                        <p class="testimonial-author">- A社 代表取締役 山田様</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>「Web集客の知識が全くない私でも、安心して任せられました。」</p>
+                        <p class="testimonial-author">- B社 マーケティング担当 鈴木様</p>
+                    </div>
                 </div>
             </div>
-
-            <div class="profile-section">
-               <h2>プロフィール</h2>
-                <p>
-                    鹿児島県出身。大手企業でのマーケティング経験を活かし、中小企業のデジタルマーケティング支援を行う。特にセールスファネル構築とUTAGE活用の専門家として、多くの企業の売上向上に貢献している。
-                </p>
-            </div>
-          </div>
         </section>
 
         <section id="consulting" class="consulting">
             <div class="container">
                 <h2>顧問サービス</h2>
-                 <div class="consulting-content">
+                <div class="consulting-content">
                     <div class="consulting-text">
                         <h3>UTAGE構築代行 "丸投げちゃん"</h3>
                         <p>
@@ -118,108 +80,14 @@
                             さらに、効果測定や改善提案も行い、継続的な成果向上をサポートします。
                         </p>
                     </div>
-                      <div class="consulting-image">
-                        <img src="images/utage.png" alt="UTAGE構築代行" width="400" height="300">
-                     </div>
-                  </div>
-            </div>
-        </section>
-
-        <section id="works" class="works">
-            <div class="container">
-                <h2>制作実績</h2>
-                <div class="works-grid">
-                    <div class="work-card">
-                        <img src="images/work1.png" alt="制作実績1" width="300" height="200">
-                        <h3>実績タイトル1</h3>
-                        <p>実績の簡単な説明1</p>
-                    </div>
-                    <div class="work-card">
-                        <img src="images/work2.png" alt="制作実績2" width="300" height="200">
-                        <h3>実績タイトル2</h3>
-                        <p>実績の簡単な説明2</p>
-                    </div>
-                     <div class="work-card">
-                        <img src="images/work3.png" alt="制作実績3" width="300" height="200">
-                        <h3>実績タイトル3</h3>
-                        <p>実績の簡単な説明3</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="testimonials">
-            <div class="container">
-                <h2>お客様の声</h2>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <p>「UTAGE導入後、見込み客が2倍に増えました！」</p>
-                        <p class="testimonial-author">- A社 代表取締役 山田様</p>
-                    </div>
-                      <div class="testimonial-card">
-                        <p>「Web集客の知識が全くない私でも、安心して任せられました。」</p>
-                        <p class="testimonial-author">- B社 マーケティング担当 鈴木様</p>
+                    <div class="consulting-image">
+                        <img src="images/utage.png" alt="UTAGE構築代行" width="400" height="300" loading="lazy">
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>お問い合わせ</h2>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">お名前</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">メールアドレス</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">メッセージ</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">送信</button>
-                </form>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>株式会社CLAN</h3>
-                    <p>〒892-0851<br>鹿児島県鹿児島市上竜尾町1番2号</p>
-                    <p>TEL: 準備中</p>
-                    <p>受付時間: 9:00〜18:00（土日祝を除く）</p>
-                </div>
-                <div class="footer-section">
-                    <h3>リンク</h3>
-                    <ul>
-                        <li><a href="#works">制作実績</a></li>
-                        <li><a href="#testimonials">お客様の声</a></li>
-                        <li><a href="#consulting">顧問サービス</a></li>
-                        <li><a href="#about">会社概要</a></li>
-                        <li><a href="#contact">お問い合わせ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>SNS</h3>
-                    <div class="social-links">
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2025 株式会社CLAN. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+    <script src="/script.js" defer></script>
 </body>
 </html>
